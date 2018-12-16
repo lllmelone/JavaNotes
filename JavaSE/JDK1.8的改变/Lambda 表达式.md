@@ -8,7 +8,7 @@ Lambda表达式的意思就是 **没有函数名的函数**
 它的结构是 这样
 ![](Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/59B5B1B2-D905-4321-86C3-8D30BF12BA46.png)
 
-图1.0
+							图1.0
 
 一共分为3部分，**()**   ,**->**,**{}**
 如上图所示，（）中存放变量，{} 中存放执行的步骤，中间加上 —> 就ok
@@ -24,7 +24,8 @@ public class Test {
     }
 }
 ```
-图1.1
+	
+							图1.1
 这是遍历一个list。
 具体是怎么遍历的，暂且不提，先搞明白Lambda表达式。
 就跟图1.0 所描述的那样：
@@ -43,7 +44,8 @@ public class Test {
     }
 }
 ```
-						     图1.2
+
+							图1.2
 
 可以简写成
 ```
@@ -56,7 +58,8 @@ public class ThreadTest {
     }
 }
 ```
-						     图1.3
+
+							图1.3
 
 如果lamdba表达式 仅仅调用了一个方法 ，那么还可以简写
 ```
@@ -69,7 +72,8 @@ public class ThreadTest {
     }
 }
 ```
-						     图1.4
+
+							图1.4
 
 **::**
 在java中表示**方法引用**，如果lambda表达式就一句话，执行了一个方法。
@@ -91,12 +95,12 @@ public interface FunctionInterface {
     public abstract void doSomething();
 }
 ```
-						     图1.5
+
+							图1.5
 
 	由于接口的方法默认就是public abstatic ，所以可以不写public abstract，这个接口也是函数式接口。
 JAVA8 中已经添加了许多这种函数式接口
-![](Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/099AF2A9-FECE-40C5-AC26-54B4442E6B98.png)
-						     图1.6
+具体可见 java.util.function
 他们都只有一个public abstract 的方法。
 
 如图1.4遍历使用了forEach（）方法，那么我们来看看forEach这个方法长什么样子？
@@ -108,11 +112,29 @@ JAVA8 中已经添加了许多这种函数式接口
         }
     }
 ```
-						     图1.7
+
+							图1.6
 咦，入参是一个接口Consumer<? super T> action（一个函数式接口），也就是说咱们给这个函数式接口传入了一个Lambda表达式。
 那么 我们继续来看看Consummer是怎么定义的
-![](Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F/5EA49A07-270B-4798-92D6-C4444229BD1B.png)
-						     图1.8
+```
+@FunctionalInterface
+public interface Consumer<T> {
+
+    /**
+     * Performs this operation on the given argument.
+     *
+     * @param t the input argument
+     */
+    void accept(T t);
+
+    default Consumer<T> andThen(Consumer<? super T> after) {
+        Objects.requireNonNull(after);
+        return (T t) -> { accept(t); after.accept(t); };
+    }
+}
+```
+
+							图1.7
 它符合函数式接口的定义，只有一个public abstatic 的方法 accept。另一个方法andThen，并不是public abstatic 的。
 再来看图1.7 
 没毛病！
@@ -135,7 +157,8 @@ class ThreadTest {
     }
 }
 ```
-						     图1.9
+	
+							图1.8
 啊呀呀！ 果然如此！！！
 但是，像是像，编译的时候，并没有真正的生成了一个类！！！
 
