@@ -14,7 +14,7 @@ Lambda表达式的意思就是 **没有函数名的函数**
 如上图所示，（）中存放变量，{} 中存放执行的步骤，中间加上 —> 就ok
 下面 搞一个例子来说明一下：
 
-```
+```java
 public class Test {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
