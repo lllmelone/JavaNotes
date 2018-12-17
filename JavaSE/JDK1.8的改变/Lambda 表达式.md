@@ -15,15 +15,15 @@ Lambda表达式的意思就是 **没有函数名的函数**
 下面 搞一个例子来说明一下：
 
 ```java
-public class Test {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.forEach((String str) -> {
-            System.out.println(str);//步骤
-            //doSomething
-        });
-    }
-}
+	public class Test {
+	    public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.forEach((String str) -> {
+		    System.out.println(str);//步骤
+		    //doSomething
+		});
+	    }
+	}
 ```
 							图1.1
 这是遍历一个list。
@@ -34,22 +34,22 @@ public class Test {
 	   中间加上一个 —>
 就是这样。
 如果（）中只有一个参数，那么可以省略小括号。如果{}中只有一行带脉，那么{}也是可以省略的。而且基本上我都不写参数的类型，可以可以的，那么下面的这段代码
-```
-public class Test {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.forEach(str -> {
-            System.out.println(str);//步骤
-        });
-    }
-}
+```java
+	public class Test {
+	    public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.forEach(str -> {
+		    System.out.println(str);//步骤
+		});
+	    }
+	}
 ```
 
 							图1.2
 
 可以简写成
-```
-public class ThreadTest {
+```java
+	public class ThreadTest {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.forEach(str ->
@@ -62,15 +62,15 @@ public class ThreadTest {
 							图1.3
 
 如果lamdba表达式 仅仅调用了一个方法 ，那么还可以简写
-```
-public class ThreadTest {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.forEach(
-                System.out::println//步骤
-        );
-    }
-}
+```java
+	public class ThreadTest {
+	    public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.forEach(
+			System.out::println//步骤
+		);
+	    }
+	}
 ```
 
 							图1.4
@@ -90,10 +90,10 @@ Lambda表达式可以在任何地方使用嘛？
 但是它**说白了也就是一个接口**
 **函数式接口**
 首先是一个接口，然后它只有一个public abstract 的方法，但是可以有其他的别的声明的方法。如下
-```
-public interface FunctionInterface {
-    public abstract void doSomething();
-}
+```java
+	public interface FunctionInterface {
+	    public abstract void doSomething();
+	}
 ```
 
 							图1.5
@@ -104,34 +104,34 @@ JAVA8 中已经添加了许多这种函数式接口
 他们都只有一个public abstract 的方法。
 
 如图1.4遍历使用了forEach（）方法，那么我们来看看forEach这个方法长什么样子？
-```
-   default void forEach(Consumer<? super T> action) {
-        Objects.requireNonNull(action);// action 若为空，抛异常
-        for (T t : this) {
-            action.accept(t);
-        }
-    }
+```java
+	   default void forEach(Consumer<? super T> action) {
+		Objects.requireNonNull(action);// action 若为空，抛异常
+		for (T t : this) {
+		    action.accept(t);
+		}
+	    }
 ```
 
 							图1.6
 咦，入参是一个接口Consumer<? super T> action（一个函数式接口），也就是说咱们给这个函数式接口传入了一个Lambda表达式。
 那么 我们继续来看看Consummer是怎么定义的
-```
-@FunctionalInterface
-public interface Consumer<T> {
+```java
+	@FunctionalInterface
+	public interface Consumer<T> {
 
-    /**
-     * Performs this operation on the given argument.
-     *
-     * @param t the input argument
-     */
-    void accept(T t);
+	    /**
+	     * Performs this operation on the given argument.
+	     *
+	     * @param t the input argument
+	     */
+	    void accept(T t);
 
-    default Consumer<T> andThen(Consumer<? super T> after) {
-        Objects.requireNonNull(after);
-        return (T t) -> { accept(t); after.accept(t); };
-    }
-}
+	    default Consumer<T> andThen(Consumer<? super T> after) {
+		Objects.requireNonNull(after);
+		return (T t) -> { accept(t); after.accept(t); };
+	    }
+	}
 ```
 
 							图1.7
@@ -142,20 +142,20 @@ public interface Consumer<T> {
 然后遍历List 执行action的accept方法
 那么重点来了！！！！
 怎么就调用了accept这个方法了呢，我并没有重写这个方法啊，看来，Lambda表达式相当于重载了这个方法，返回了这个接口的实现类，就像匿名内部类一样。来来来，我用匿名内部类写一下
-```
-class ThreadTest {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.forEach(
-                new Consumer<String>() {
-                    @Override
-                    public void accept(String s) {
-                        System.out.println(s);
-                    }
-                }
-        );
-    }
-}
+```java
+	class ThreadTest {
+	    public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.forEach(
+			new Consumer<String>() {
+			    @Override
+			    public void accept(String s) {
+				System.out.println(s);
+			    }
+			}
+		);
+	    }
+	}
 ```
 	
 							图1.8
