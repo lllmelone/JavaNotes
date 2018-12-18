@@ -6,7 +6,7 @@ Lambda表达式的意思就是 **没有函数名的函数**
 它可以接受一些参数，然后会执行一些操作，
 就是酱。
 它的结构是 这样
-![](../../images/9B5B1B2-D905-4321-86C3-8D30BF12BA46.png)
+![](https://github.com/haodedong/JavaNotes/blob/master/images/59B5B1B2-D905-4321-86C3-8D30BF12BA46.png)
 
 							图1.0
 
