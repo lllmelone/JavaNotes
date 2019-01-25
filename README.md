@@ -12,9 +12,10 @@
 #### [CommonTools](https://github.com/haodedong/JavaNotes/tree/master/CommonTools)
 * [Idea的快速使用](https://github.com/haodedong/JavaNotes/blob/master/CommonTools/Intellij%20idea%20%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8.md)
 ---
-### 写本项目的初衷
+### 写JavaNotes的初衷
 
 * #### 由于是自学Java，总感觉自己学的不扎实，边复习边记录。
 * #### 曾经想写博客，无论是Github Page还是WordPress 都试过，甚至还买过域名；服务器，总感觉，太费劲，太折腾。
 * ####  从大四的实习，到现在已满一年，是时候好好读读各位大神的著作了，在此记录，学习
-* #### 注册了github账号，却一直没有什么贡献，心有不甘。
+* #### 早早的注册了github账号，想自己也搞一个。
+* #### 希望打造成Java开发者的常备知识库。
