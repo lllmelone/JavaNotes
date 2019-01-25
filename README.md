@@ -6,7 +6,7 @@
 ### 目录
 #### [JavaSe](https://github.com/haodedong/JavaNotes/tree/master/JavaSE)
 * [Lambda表达式](https://github.com/haodedong/JavaNotes/blob/master/JavaSE/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
- 
+* [JVM内存结构](https://github.com/haodedong/JavaNotes/blob/master/JavaSE/JVM%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84.md)
 ---
 ### 写本项目的初衷
 
