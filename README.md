@@ -9,6 +9,8 @@
 * [JVM内存结构](https://github.com/haodedong/JavaNotes/blob/master/JavaSE/JVM%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84.md)
 #### [JavaWeb](https://github.com/haodedong/JavaNotes/tree/master/JavaWeb)
 * [深入理解Session与Cookie](https://github.com/haodedong/JavaNotes/blob/master/JavaWeb/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Session%E4%B8%8ECookie.md)
+#### [Database](https://github.com/haodedong/JavaNotes/blob/master/Database)
+* [Mongo基础知识](https://github.com/haodedong/JavaNotes/blob/master/Database/mongo%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.md)
 #### [CommonTools](https://github.com/haodedong/JavaNotes/tree/master/CommonTools)
 * [Idea的快速使用](https://github.com/haodedong/JavaNotes/blob/master/CommonTools/Intellij%20idea%20%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8.md)
 ---
