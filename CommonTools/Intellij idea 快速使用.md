@@ -1,5 +1,5 @@
 # Intellij idea 快速使用
-![](Intellij%20idea%20%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8/52938651-6ADA-4F1C-B812-100B3C75CF90.png)
+![](https://github.com/haodedong/JavaNotes/blob/master/images/intellijIdea.png)
 
 ### 众里寻他千百度。蓦然回首
 大约两年前，我在自习Java的时候，根据书上的描述，以及老师的推荐。下载了Eclipse，作为我开发的IDE，其实当时也没感觉Eclipse的哪些优点啊，缺点啊。直到有一天在网上看到一款IDE：Intellij Idea。它优美的界面深深的打动了我，甚至好像是能够完全用键盘进行操作，甚至有时候不需要鼠标，简直是装逼利器，我特别喜欢。因此下载了idea尝试使用。但我万万没想到的是，为什么那么卡，卡顿的毫无游戏体验。特别是首次打开一个项目，简直卡的生活不能自理😭。当时笔记本的配置是机械硬盘+4G运存。完全玩不了，只能换回Eclipse🙈。
