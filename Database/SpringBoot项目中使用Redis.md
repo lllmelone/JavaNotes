@@ -2,7 +2,7 @@
 ## 个人对redis的理解
 Redis是一个基于键值对的数据库，由于它讲数据保存到内存中，因此速度特别快，当然它也会将数据持久化到磁盘中。
  
-##如何在SpringBoot项目中使用Redis
+## 如何在SpringBoot项目中使用Redis
 需要在SpringBoot项目中加入以下依赖
 ``` java
 <dependency>
