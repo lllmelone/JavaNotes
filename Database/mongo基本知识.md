@@ -65,6 +65,13 @@ Ok
 注：以上命令有参考 [linux  安装mongo - 东北大亨 - 博客园](https://www.cnblogs.com/northeastTycoon/p/9298302.html)[Linux 安装MongoDB并设为开机启动 - wuhulala的休息室 - CSDN博客](https://blog.csdn.net/u013076044/article/details/80251720)
 
 ## Mongo 的CRUD
+``` sql
+db.ovms_app_bt_storage_calc_item.aggregate([{ $match: {"transactionId":"5c7771eec1f4da3917abff05"}},
+ {$group : {_id: "$vendorId", amount:{$sum:"$amount"}}}]).forEach(function (data) {
+    print("vendorId:"+data._id+" ,amount:" +"\t"+data.amount);
+    
+})
+```
 ## Jongo
 ## Mongo与SpringBoot整合
  
