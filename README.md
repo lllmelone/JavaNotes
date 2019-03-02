@@ -7,7 +7,7 @@
 #### [JavaSe](https://github.com/haodedong/JavaNotes/tree/master/JavaSE)
 * [Lambda表达式](https://github.com/haodedong/JavaNotes/blob/master/JavaSE/Lambda%20%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
 * [JVM内存结构](https://github.com/haodedong/JavaNotes/blob/master/JavaSE/JVM%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84.md)
-#### [JavaWeb基础](https://github.com/haodedong/JavaNotes/tree/master/JavaWeb)
+#### [JavaWeb基础](https://github.com/haodedong/JavaNotes/tree/master/JavaWeb%E5%9F%BA%E7%A1%80)
 * [Session与Cookie](https://github.com/haodedong/JavaNotes/blob/master/JavaWeb%E5%9F%BA%E7%A1%80/Session%E4%B8%8ECookie.md)
 #### [数据库](https://github.com/haodedong/JavaNotes/blob/master/Database)
 * [Mongo基础知识](https://github.com/haodedong/JavaNotes/blob/master/Database/mongo%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.md)
