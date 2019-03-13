@@ -72,6 +72,13 @@ db.ovms_app_bt_storage_calc_item.aggregate([{ $match: {"transactionId":"5c7771ee
     
 })
 ```
+
+### 查询某个字段非空
+
+
+``` java
+(new Criteria("platforms.P" + cartId + ".pNumIId").nin("",null)
+```
 ## Jongo
 ## Mongo与SpringBoot整合
  
